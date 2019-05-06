@@ -1,0 +1,25 @@
+﻿@page
+@model PageHandlerExamples.Pages.PageHandlerTestModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>PageHandlerTest</title>
+</head>
+<body>
+    <h1>@Model.Message</h1>
+    <form method="post" asp-page="PageHandlerTest" asp-page-handler="@Model.PageHandler">
+        <label asp-for="Text"></label>
+        <input asp-for="Text" />
+        <input type="submit" value="@Model.SubmitButtonValue" />
+    </form>
+    <div>
+        <h2>@Model.PostMessage</h2>
+    </div>
+</body>
+</html>

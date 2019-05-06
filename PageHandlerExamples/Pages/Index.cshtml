@@ -1,0 +1,21 @@
+﻿@page
+@model PageHandlerExamples.Pages.IndexModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <ul>
+        <li><a asp-page="PageHandlerTest">Dette er et get kald til PageHandlerTest uden en handler</a></li>
+        <li><a asp-page="PageHandlerTest" asp-page-handler="Edit">Dette er et get kald til PageHandlerTest med en handler kaldet Edit</a></li>
+        <li><a asp-page="PageHandlerTest" asp-page-handler="Delete">Dette er et get kald til PageHandlerTest med en handler der ikke findes</a></li>
+    </ul>
+</body>
+</html>
